@@ -19,8 +19,8 @@ SET result REAL
 ## Begin
 
 ```javascript
-besarTemperatur = 86
-tipeTemperatur = "Fahrenheit"
+INPUT besarTemperatur
+INPUT tipeTemperatur
 
 IF tipeTemperatur = "Fahrenheit" THEN
   result = (besarTemperatur - 32)*(5/9)
