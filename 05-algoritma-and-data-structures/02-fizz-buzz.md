@@ -17,8 +17,8 @@ SET i NUMBER
 ## Begin
 
 ```javascript
-INPUT n
-INPUT i
+INPUT n // Input jumlah n 1-100
+INPUT i = 0
 
 WHILE i <= n DO
   IF (i % 3 = 0) AND (i % 5 = 0) THEN
