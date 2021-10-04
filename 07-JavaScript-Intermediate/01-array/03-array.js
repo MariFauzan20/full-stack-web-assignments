@@ -2,13 +2,12 @@ const arr = [[10], [9, 7, 1], [2, 8]];
 
 function searchInArray(arr, x) {
   let concatArray = [].concat(...arr);
-  for (let i = 0; i < concatArray.length; i++) {
-    if (x == concatArray[i]) {
-      return i;
-    }
-  }
 
-  return null;
+  if (concatArray.indexOf(x) != -1) {
+    return concatArray.indexOf(x);
+  } else {
+    return null;
+  }
 }
 
 console.log(searchInArray(arr, 3));
