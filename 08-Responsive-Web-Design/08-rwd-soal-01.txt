@@ -1,0 +1,42 @@
+1. Apa itu responsive web design?
+Jawab: Responsive Web Design adalah tampilan yang memungkinkan desain di berbagai perangkat seperti mobile, desktop, tablet, dll.
+
+2. Sebutkan apa saja relative units yang dimiliki oleh CSS?
+Jawab: em, ex, ch dan rem
+
+3. Apa itu breakpoint? Bagaimana cara kita membuat hal tersebut?
+Jawab: Breakpoint adalah titik di mana konten web merespons sesuai dengan lebar perangkat yang memungkinkan menampilkan tata letak sesuai dengan lebar perangkat pengguna. cara membuatnya adalah dengan menggunakan media query. contoh sebagai berikut
+
+/* Portrait */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: landscape) {
+
+}
+
+4. Apa yang dapat kita gunakan untuk memanipulasi tata letak suatu element dalam bidang 1 dimensi?
+Jawab: kita dapat menggunakan flexbox
+
+5. Apa yang dapat kita gunakan untuk memanipulasi tata letak suatu element dalam bidang 2 dimensi?
+Jawab: kita dapat menggunakan grid
