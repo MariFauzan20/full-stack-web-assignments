@@ -1,0 +1,11 @@
+1. Apa itu CSS Framework?
+Jawab: CSS Framework adalah library yang memungkinkan desain web yang lebih mudah dan sesuai standar menggunakan CSS
+
+2. Apakah bootstrap satu-satunya CSS Framework yang dapat kita gunakan?
+Jawab: Tidak hanya bootstrap, banyak framework lain seperti Materialize, PureCSS, Foundation, Tailwind, dll
+
+3. Sebutkan beberapa CSS Framework selain Bootstrap
+Jawab: Materialize, PureCSS, Foundation, Tailwind, dll
+
+4. Bagaimana tata cara penggunaan Bootstrap?
+Jawab: pertama diinstal bisa menggunakan 2 cara yaitu cdn atau download filenya, kemudian hubungkan bootstrap dengan file html dengan cara menggunakn tag link dan selanjutnya kita sudah bisa menggunakannya dengan cara menambahkan beberapa atribut ke class.
