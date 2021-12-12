@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Wadaw</title>
+  </head>
+  <body>
+    <input id="username" type="text" />
+    <input id="password" type="password" />
+    <button id="daftar">Daftar</button>
+    <button id="login">Login</button>
+    <button id="cek">Cek</button>
+
+    <h1></h1>
+
+    <script>
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+      let daftar = document.getElementById("daftar");
+      let cek = document.getElementById("cek");
+
+      if (typeof Storage !== "undefined") {
+        daftar.addEventListener("click", () => {
+          localStorage.setItem("username", username.value);
+          localStorage.setItem("password", password.value);
+
+          document.querySelector("h1").innerText = "Berhasil daftar";
+        });
+
+        login.addEventListener("click", () => {
+          setCookie("username", localStorage.getItem("username"), 30);
+
+          document.querySelector("h1").innerText = "Berhasil login";
+        });
+
+        cek.addEventListener("click", () => {
+          checkCookie();
+        });
+      } else {
+        document.querySelector("h1").innerText =
+          "Sorry, your browser does not support Web Storage...";
+      }
+
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+          alert("Anda sudah login");
+          //   document.querySelector("h1").innerText = "Masih login kok";
+        } else {
+          console.log("nah lo");
+        }
+      }
+    </script>
+  </body>
+</html>
